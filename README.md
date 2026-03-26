@@ -3,7 +3,7 @@
 This was more of an experiment in the Go lang for me.
 Uses the beep mp3 decoder!
 
-- https://pkg.go.dev/github.com/gopxl/beep#StreamCloser
+[beep, the library used][https://pkg.go.dev/github.com/gopxl/beep#StreamCloser]
 
 ## Compilation
 	git clone https://github.com/lua-t-andrade/cmplayer
@@ -11,9 +11,8 @@ Uses the beep mp3 decoder!
 	go build .
 	
 ## Usage
-
-	mplayer [filename] - play file
-    mplayer dir - shows current directory
-    mplayer help -- shows this text
+	mplayer [filename] -- play file
+    mplayer dir        -- shows current directory
+    mplayer help       -- shows this text
 
 That's all!~
