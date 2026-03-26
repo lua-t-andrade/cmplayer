@@ -28,7 +28,7 @@ func showFiles() {
 	}
 }
 
-func setArgs() string {]
+func setArgs() string {
 	// I set all the args logic manually, but this could be done
 	// with a library.
 	args := os.Args[1:]
