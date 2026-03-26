@@ -1,9 +1,9 @@
 # SIMPLE CLI MP3 PLAYER IMPLEMENTATION IN GO
 
 This was more of an experiment in the Go lang for me.
-Uses the beep mp3 decoder!
+Uses the Beep mp3 decoder!
 
-[Beep, the library used](https://pkg.go.dev/github.com/gopxl/beep#StreamCloser)
+[Beep, the library used](https://pkg.go.dev/github.com/gopxl/beep)
 
 ## Compilation
 	git clone https://github.com/lua-t-andrade/cmplayer
