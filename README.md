@@ -6,7 +6,8 @@ Uses the beep mp3 decoder!
 - https://pkg.go.dev/github.com/gopxl/beep#StreamCloser
 
 ## Compilation
-
+	git clone https://github.com/lua-t-andrade/cmplayer
+	cd cmplayer
 	go build .
 	
 ## Usage
