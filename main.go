@@ -10,18 +10,14 @@ import (
 	"github.com/gopxl/beep/mp3"
 )
 
-func ex() {
-	os.Exit(0)
-}
-
 func usage() {
-	fmt.Println("Usage: mplayer [filename] - play file")
-	fmt.Println("       mplayer dir - shows current directory")
-	fmt.Println("       mplayer help -- shows this text")
+	fmt.Println("Usage: mplayer [filename] -- play mp3 file")
+	fmt.Println("       mplayer dir        -- shows current directory")
+	fmt.Println("       mplayer help       -- shows this text")
 }
 
 
-func showfiles() {
+func showFiles() {
 	entries, err := os.ReadDir("./")
 	if err != nil {
 		log.Fatal(err)
@@ -32,7 +28,9 @@ func showfiles() {
 	}
 }
 
-func setArgs() string {
+func setArgs() string {]
+	// I set all the args logic manually, but this could be done
+	// with a library.
 	args := os.Args[1:]
 	var argc int = 0
 	for _, _ = range args {
@@ -42,27 +40,27 @@ func setArgs() string {
 	if argc == 0 {
 		fmt.Println("Err: What file?")
 		usage()
-		ex()
+		os.Exit(0)
 	}
 	
 	if argc > 1 {
 		fmt.Println("Err: Only one file name at a time")
 		usage()
-		ex()
+		os.Exit(0)
 	}
 
 	if args[0] == "dir" {
-		showfiles()
-		ex()
+		showFiles()
+		os.Exit(0)
 	} else if args[0] == "help" {
 		usage()
-		ex()
+		os.Exit(0)
 	}
 	
 	return args[0]
 }
 
-func playfile(filename string) {
+func playFile(filename string) {
 	f, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -89,8 +87,8 @@ func playfile(filename string) {
 
 
 func main() {
-	var filename string
-	filename = setArgs()
-	playfile(filename)
+	var fileName string
+	fileName = setArgs()
+	playFile(fileName)
 	
 }
