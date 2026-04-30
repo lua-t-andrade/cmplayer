@@ -81,14 +81,11 @@ func playFile(filename string) {
 	})))
 
 	<-done
-
-
 }
 
 
 func main() {
 	var fileName string
 	fileName = setArgs()
-	playFile(fileName)
-	
+	playFile(fileName)	
 }
