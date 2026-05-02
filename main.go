@@ -40,13 +40,13 @@ func setArgs() string {
 	if argc == 0 {
 		fmt.Println("Err: What file?")
 		usage()
-		os.Exit(0)
+		os.Exit(-1)
 	}
 	
 	if argc > 1 {
 		fmt.Println("Err: Only one file name at a time")
 		usage()
-		os.Exit(0)
+		os.Exit(-1)
 	}
 
 	if args[0] == "dir" {
